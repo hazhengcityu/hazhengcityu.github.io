@@ -5,13 +5,13 @@ body{
 
 .mode1 input[type='range'] {
   overflow: hidden;
-  height: 300px;
-  -webkit-appearance: none;
+  width: 300px;
+  -webkit-appearance: slider-vertical;
   background-color: #ECECEC;
 }
 
 .mode1 input[type='range']::-webkit-slider-runnable-track {
-  width: 12px;
+  height: 12px;
   -webkit-appearance: none;
   color: #3A94EF;
   margin-top: -1px;
