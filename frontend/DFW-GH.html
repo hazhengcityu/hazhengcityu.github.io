@@ -3762,6 +3762,7 @@
 				console.log("draw",minrad,maxrad);
 				
 				content = textfile.responseText;
+				console.log("debug",content);
 				arr_all = content.split('\r\n');
 				arr = arr_all.slice(1,parseInt(arr_all[0])+1);
 				if (display_mode==1) {
@@ -4041,7 +4042,6 @@
 				}
 				
 				pnum = pnum + pstep;
-				console.log("debug",arr_all,pnum);
 				arr0 = arr_all[pnum].split(',');
 				pstep = parseInt(arr0[0]);
 				mindef_self = parseFloat(arr0[1]);
