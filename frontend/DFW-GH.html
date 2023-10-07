@@ -3762,7 +3762,6 @@
 				console.log("draw",minrad,maxrad);
 				
 				content = textfile.responseText;
-				console.log("debug",content);
 				arr_all = content.split('\r\n');
 				arr = arr_all.slice(1,parseInt(arr_all[0])+1);
 				if (display_mode==1) {
@@ -3899,6 +3898,7 @@
 				pstep = parseInt(arr_all[pnum]);
 				pnum = pnum + 1;
 				arr = arr_all.slice(pnum,pnum+pstep);
+				console.log("debug1",pnum,pstep,arr);
 				for (var i = 0; i < arr.length; i++) {
 					arr0 = arr[i].split(',');
 					var form_poi = new THREE.Vector3(arr0[0]-0, arr0[1]-0);
@@ -3907,6 +3907,7 @@
 				
 				pnum = pnum + pstep;
 				arr = arr_all.slice(pnum,pnum+pstep);
+				console.log("debug2",pnum,pstep,arr);
 				for (var i = 0; i < arr.length; i++) {
 					arr0 = arr[i].split(',');
 					form_pois_neib_pois.push(arr0);
@@ -3914,6 +3915,7 @@
 				
 				pnum = pnum + pstep;
 				arr = arr_all.slice(pnum,pnum+pstep);
+				console.log("debug3",pnum,pstep,arr);
 				for (var i = 0; i < arr.length; i++) {
 					arr0 = arr[i].split(',');
 					form_pois_neib_edges.push(arr0);
@@ -3921,6 +3923,7 @@
 				
 				pnum = pnum + pstep;
 				arr = arr_all.slice(pnum,pnum+pstep);
+				console.log("debug4",pnum,pstep,arr);
 				for (var i = 0; i < arr.length; i++) {
 					arr0 = arr[i].split(',');
 					form_pois_edges.push(arr0);
@@ -3930,6 +3933,7 @@
 				pstep = parseInt(arr_all[pnum]);
 				pnum = pnum + 1;
 				arr = arr_all.slice(pnum,pnum+pstep);
+				console.log("debug5",pnum,pstep,arr);
 				for (var i = 0; i < arr.length; i++) {
 					arr0 = arr[i].split(',');
 					var p1 = new THREE.Vector3(arr0[0]-0, arr0[1]-0);
@@ -4043,12 +4047,14 @@
 				
 				pnum = pnum + pstep;
 				arr0 = arr_all[pnum].split(',');
+				console.log("debug6",pnum,pstep,arr0);
 				pstep = parseInt(arr0[0]);
 				mindef_self = parseFloat(arr0[1]);
 				maxdef_self = parseFloat(arr0[2]);
 				structure_length = parseFloat(arr0[3]);
 				pnum = pnum + 1;
 				arr = arr_all.slice(pnum,pnum+pstep);
+				console.log("debug7",pnum,pstep,arr);
 				for (var i = 0; i < arr.length; i++) {
 					arr0 = arr[i].split(',');
 					let temp = [];
