@@ -360,7 +360,7 @@
         <span style="position:absolute; bottom:0px; left:-450px; font-size:15px;">Our server is proceeding requests. You can explore our examples or upload CSV data file to restore your results in the "File Manager".</span>
 	</div>
 	
-	
+	<a href="https://www.architecturalintelligence.group/"><img id="PSL" src="icon/logo_white_long.png" height="50" style="position:absolute; top:30px; right:300px; display:block;"></a>
 	<a href="https://psl.design.upenn.edu/"><img id="PSL" src="icon/PSL-long.png" height="50" style="position:absolute; top:30px; right:190px; display:block;"></a>
 	<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1944691&HistoricalAwards=false"><img id="NSF" src="icon/NSF-long.png" height="50" style="position:absolute; top:30px; right:20px; display:block;"></a>
 
@@ -3896,10 +3896,8 @@
 				
 				pnum = parseInt(arr_all[0])+1;
 				pstep = parseInt(arr_all[pnum]);
-				console.log("debug0",arr_all,pnum,arr_all[pnum]);
 				pnum = pnum + 1;
 				arr = arr_all.slice(pnum,pnum+pstep);
-				console.log("debug1",pnum,pstep,arr);
 				for (var i = 0; i < arr.length; i++) {
 					arr0 = arr[i].split(',');
 					var form_poi = new THREE.Vector3(arr0[0]-0, arr0[1]-0);
@@ -3908,7 +3906,6 @@
 				
 				pnum = pnum + pstep;
 				arr = arr_all.slice(pnum,pnum+pstep);
-				console.log("debug2",pnum,pstep,arr);
 				for (var i = 0; i < arr.length; i++) {
 					arr0 = arr[i].split(',');
 					form_pois_neib_pois.push(arr0);
@@ -3916,7 +3913,6 @@
 				
 				pnum = pnum + pstep;
 				arr = arr_all.slice(pnum,pnum+pstep);
-				console.log("debug3",pnum,pstep,arr);
 				for (var i = 0; i < arr.length; i++) {
 					arr0 = arr[i].split(',');
 					form_pois_neib_edges.push(arr0);
@@ -3924,7 +3920,6 @@
 				
 				pnum = pnum + pstep;
 				arr = arr_all.slice(pnum,pnum+pstep);
-				console.log("debug4",pnum,pstep,arr);
 				for (var i = 0; i < arr.length; i++) {
 					arr0 = arr[i].split(',');
 					form_pois_edges.push(arr0);
@@ -3934,7 +3929,6 @@
 				pstep = parseInt(arr_all[pnum]);
 				pnum = pnum + 1;
 				arr = arr_all.slice(pnum,pnum+pstep);
-				console.log("debug5",pnum,pstep,arr);
 				for (var i = 0; i < arr.length; i++) {
 					arr0 = arr[i].split(',');
 					var p1 = new THREE.Vector3(arr0[0]-0, arr0[1]-0);
@@ -4048,14 +4042,12 @@
 				
 				pnum = pnum + pstep;
 				arr0 = arr_all[pnum].split(',');
-				console.log("debug6",pnum,pstep,arr0);
 				pstep = parseInt(arr0[0]);
 				mindef_self = parseFloat(arr0[1]);
 				maxdef_self = parseFloat(arr0[2]);
 				structure_length = parseFloat(arr0[3]);
 				pnum = pnum + 1;
 				arr = arr_all.slice(pnum,pnum+pstep);
-				console.log("debug7",pnum,pstep,arr);
 				for (var i = 0; i < arr.length; i++) {
 					arr0 = arr[i].split(',');
 					let temp = [];
