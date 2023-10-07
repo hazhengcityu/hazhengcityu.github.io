@@ -532,7 +532,7 @@
 					if (textfile_done.readyState == 4 && textfile_done.status == 200)
 					{ 
 						content_done = textfile_done.responseText;
-						arr_done = content_done.split('\r\n');
+						arr_done = content_done.split('\n');
 
 						if (arr_done[0]=="1"){
 							var pointdata = [];
@@ -615,7 +615,7 @@
 					if (textfile_done_FEM.readyState == 4 && textfile_done_FEM.status == 200)
 					{ 
 						content_done_FEM = textfile_done_FEM.responseText;
-						arr_done_FEM = content_done_FEM.split('\r\n');
+						arr_done_FEM = content_done_FEM.split('\n');
 
 						if (arr_done_FEM[0]=="1"){
 							var pointdata = ["F"];
@@ -623,7 +623,7 @@
 							for (var i = 0; i < points.length; i++) {
 								pointdata.push(points[i].x*2, 500-points[i].y*2);
 							}
-							arr_all = content.split('\r\n');
+							arr_all = content.split('\n');
 							pointdata.push(parseInt(arr_all[0])+1);
 							arr = arr_all.slice(1,parseInt(arr_all[0])+1);
 							for (var i = 0; i < arr.length; i++) {
@@ -706,7 +706,7 @@
 												{
 													
 													content_FEM = textfile_FEM.responseText;
-													arr_all_FEM = content_FEM.split('\r\n');
+													arr_all_FEM = content_FEM.split('\n');
 													
 													console.log(j,received_FEM);
 													
@@ -2031,7 +2031,7 @@
 						console.log("local-file",minrad,maxrad);
 						
 						content = reader.result;
-						arr_all = content.split('\r\n');
+						arr_all = content.split('\n');
 						arr = arr_all.slice(1,parseInt(arr_all[0])+1);
 						if (display_mode==1) {
 							for (var i = 0; i < arr.length; i++) {
@@ -2671,7 +2671,7 @@
 					console.log("sample-file",minrad,maxrad);
 					
 					content = textfile.responseText;
-					arr_all = content.split('\r\n');
+					arr_all = content.split('\n');
 					arr = arr_all.slice(1,parseInt(arr_all[0])+1);
 					if (display_mode==1) {
 						for (var i = 0; i < arr.length; i++) {
@@ -3306,7 +3306,7 @@
 			if (textfile_input.readyState == 4 && textfile_input.status == 200)
 			{ 
 				content_input = textfile_input.responseText;
-				arr_input = content_input.split('\r\n');
+				arr_input = content_input.split('\n');
 				// document.getElementById("reduce_rate").defaultValue = "0.5";
 				// document.getElementById("tolerance_of_edge_length").defaultValue = "0.3";
 				// document.getElementById("length_constraint_maltiplier").defaultValue = "0.5";
@@ -3762,7 +3762,7 @@
 				console.log("draw",minrad,maxrad);
 				
 				content = textfile.responseText;
-				arr_all = content.split('\r\n');
+				arr_all = content.split('\n');
 				arr = arr_all.slice(1,parseInt(arr_all[0])+1);
 				if (display_mode==1) {
 					for (var i = 0; i < arr.length; i++) {
@@ -4331,7 +4331,7 @@
 			
 			console.log("update",minrad,maxrad);
 			
-			arr_all = content.split('\r\n');
+			arr_all = content.split('\n');
 			arr = arr_all.slice(1,parseInt(arr_all[0])+1);
 			if (display_mode==1) {
 				for (var i = 0; i < arr.length; i++) {
